@@ -1,7 +1,8 @@
+
 import { View, TextInput, Button, StyleSheet } from "react-native"
 
 export default function AddItem (props){
-    const{onHandlerChangeItem, onHandlerAddItem} =(props)
+    const{onHandlerChangeItem, onHandlerAddItem, textItem} =(props)
 
     return(
         <View style={styles.container}>

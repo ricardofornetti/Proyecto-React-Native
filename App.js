@@ -1,4 +1,4 @@
-
+import React from "react";
 import { StyleSheet, View} from 'react-native';
 import { useState } from 'react';
 import AddItem from './componentes/AddItem';
@@ -21,18 +21,18 @@ export default function App() {
     setTextItem('')
   }
 
-  const onHandlerDeleteItem = id => {
+  const onHandlerDeleteItem = (id) => {
     setItemList(currentItems => currentItems.filter(item => item.id !==id))
     setItemSelected({})
     setModalVisible(!modalVisible)
   }
 
-  const onHandlerModal = id => 
+  const onHandlerModal = (id)=> 
     setItemSelected(itemList.find(item => item.id === id))
     setModalVisible(!modalVisible)
   
 
-  const onHandlerCompleteItem = id => {
+  const onHandlerCompleteItem = (id) => {
     let itemCompleted = itemList.findIndex((item) => item.id === id)
     itemList[itemCompleted].completed = true
     setItemList([...itemList])
