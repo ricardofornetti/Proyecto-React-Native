@@ -1,4 +1,4 @@
-import { Modal, Text, View, Button, StyleSheet } from "react-native"
+import { Modal, Text, View, Button, StyleSheet, TouchableOpacity } from "react-native"
 
 export default function CustomModal(props) {
     const { modalVisible, itemSelected, onHandlerDeleteItem, onHandlerCompleteItem } = props
@@ -22,13 +22,23 @@ export default function CustomModal(props) {
                     <Text style={styles.modalItem}>{itemSelected.value}</Text>
                 </View>
                 <View style={styles.modalButton}>
-                    <Button onPress={() =>onHandlerDeleteItem(itemSelected.id)} title='Confirmar' />
-                    <Button onPress={() => onHandlerCompleteItem(itemSelected.id)} title='Completar' />
+                    <TouchableOpacity
+                        style={styles.buttonConfirm}
+                        onPress={() =>onHandlerDeleteItem(itemSelected.id)}
+                    >
+                        <Text style={styles.texto}>Confirmar</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.buttonConfirm}
+                        onPress={() => onHandlerCompleteItem(itemSelected.id)}
+                    >
+                        <Text style={styles.texto}>Completar</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
     </Modal>
-  )
+)
 }
 
 const styles = StyleSheet.create({
@@ -37,6 +47,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(0,0,0,0.5)'
+        
         },  
         modalView: {
         backgroundColor: 'white',
@@ -63,6 +74,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around'
+        },
+        buttonConfirm:{
+            backgroundColor:'red',
+            marginLeft: 10,
+            borderRadius:10,
+            padding: 15,
+        },
+        texto:{
+            color: 'white',
         },
         modalItem: {
         fontSize: 30

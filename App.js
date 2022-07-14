@@ -65,5 +65,7 @@ const styles = StyleSheet.create({
   screen: {
     marginTop: "10%",
     padding: 30,
+    
+    
   },
 });

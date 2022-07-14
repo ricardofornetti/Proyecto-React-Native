@@ -1,23 +1,26 @@
 
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { View, TextInput, Button, StyleSheet, TouchableOpacity, Text  } from "react-native";
 
 export default function AddItem(props) {
   const { onHandlerChangeItem, onHandlerAddItem, textItem } = props;
 
   return (
     <View style={styles.container}>
-      <TextInput
+        <TextInput
         placeholder="Escribe Aqui"
         style={styles.input}
         value={textItem}
         onChangeText={onHandlerChangeItem}
-      />
-      <Button
-        title="Agregar"
-        onPress={onHandlerAddItem}
-        disabled={textItem.length < 1 ? true : false}
-      />
+        />
+        <TouchableOpacity
+            style={styles.buttonAdd}
+            onPress={onHandlerAddItem}
+            disabled={textItem.length < 1 ? true : false}
+        >
+            <Text style={styles.texto}>Agregar</Text>
+        </TouchableOpacity>
     </View>
+    
   );
 }
 
@@ -27,11 +30,23 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         flexDirection: "row",
+        
     },
     input: {
     width: "80%",
-    height: 50,
+    height: 45,
     borderColor: "black",
     borderWidth: 1,
+    padding: 10,
+    borderRadius:10,
+    },
+    buttonAdd:{
+        backgroundColor:'red',
+        marginLeft: 10,
+        borderRadius:10,
+        padding: 15,
+    },
+    texto:{
+        color: 'white',
     },
 });
