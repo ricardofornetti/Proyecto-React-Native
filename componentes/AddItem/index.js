@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius:10,
+    fontFamily:'PTSansNarrowRegular',
     },
     buttonAdd:{
         backgroundColor:'red',
@@ -48,5 +49,6 @@ const styles = StyleSheet.create({
     },
     texto:{
         color: 'white',
+        fontFamily:'PTSansNarrowRegular',
     },
 });

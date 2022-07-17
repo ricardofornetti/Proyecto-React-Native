@@ -1,11 +1,19 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Image} from "react-native";
 import { useState } from "react";
 import AddItem from "./componentes/AddItem";
 import List from "./componentes/List";
 import CustomModal from "./componentes/Modal";
+import Header from "./componentes/Header";
+import { useFonts} from 'expo-font'
+import AppLoading from 'expo-app-loading'
+
+
 
 export default function App() {
+
+  const [loaded] = useFonts({PTSansNarrowBold: require('./assets/fonts/PTSansNarrow-Bold.ttf'), PTSansNarrowRegular: require('./assets/fonts/PTSansNarrow-Regular.ttf')})
+
   const [textItem, setTextItem] = useState("");
   const [itemList, setItemList] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -40,9 +48,16 @@ export default function App() {
     setModalVisible(!modalVisible);
   };
 
+  if(!loaded) return <AppLoading />
   return (
+    
+    
     <View style={styles.screen}>
-      <CustomModal
+        
+        <Header title={'Bienvenidos'}style={styles.title}>
+        </Header>
+        
+        <CustomModal
         modalVisible={modalVisible}
         onHandlerDeleteItem={onHandlerDeleteItem}
         itemSelected={itemSelected}
@@ -65,7 +80,11 @@ const styles = StyleSheet.create({
   screen: {
     marginTop: "10%",
     padding: 30,
-    
-    
   },
+  title:{
+    fontFamily:'PTSansNarrowBold',
+  },
+  
+
+  
 });

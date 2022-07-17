@@ -16,7 +16,7 @@ export default function CustomModal(props) {
                     <Text>Mi Modal</Text>
                 </View>
                 <View style={styles.modalMessage}>
-                    <Text>¿Seguro que desea eliminar? </Text>
+                    <Text style={styles.modalMessage}>¿Seguro que desea eliminar? </Text>
                 </View>
                 <View style={styles.modalMessage}>
                     <Text style={styles.modalItem}>{itemSelected.value}</Text>
@@ -26,7 +26,7 @@ export default function CustomModal(props) {
                         style={styles.buttonConfirm}
                         onPress={() =>onHandlerDeleteItem(itemSelected.id)}
                     >
-                        <Text style={styles.texto}>Confirmar</Text>
+                        <Text style={styles.texto}>Eliminar</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.buttonConfirm}
@@ -63,11 +63,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#ccc',
         color: 'white',
         fontSize: 18,
+        fontFamily:'PTSansNarrowRegular'
         },
         modalMessage: {
-        marginBottom: 10,
-        justifyContent: 'center',
-        alignItems: 'center'
+            marginBottom: 10,
+            justifyContent: 'center',
+            alignItems: 'center',
+            textTransform:'uppercase',   
         },
         modalButton: {
         marginTop: 15,
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
             marginLeft: 10,
             borderRadius:10,
             padding: 15,
+            fontFamily:'PTSansNarrowRegular',
         },
         texto:{
             color: 'white',
