@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
         },
         buttonConfirm:{
-            backgroundColor:'red',
+            backgroundColor:'#00bfff',
             marginLeft: 10,
             borderRadius:10,
             padding: 15,

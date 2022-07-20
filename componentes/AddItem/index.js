@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontFamily:'PTSansNarrowRegular',
     },
     buttonAdd:{
-        backgroundColor:'red',
+        backgroundColor:'#00bfff',
         marginLeft: 10,
         borderRadius:10,
         padding: 15,

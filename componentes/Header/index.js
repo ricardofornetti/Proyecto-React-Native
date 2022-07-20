@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text, StyleSheet} from 'react-native'
-
+import { View, Text, StyleSheet, ImageBackground} from 'react-native'
+import logoEdemsa from "../../assets/img/logoEdemsa.jpg"
 
 
 
@@ -10,6 +10,13 @@ const Header = props => {
     return (
         <View style={styles.header}>
             <Text style={styles.headerTitle}>{title}</Text>
+            
+            <ImageBackground 
+            source={logoEdemsa} 
+            style={{width:"100%", height:"100%", alignItems:"center", justifyContent:"center"}}
+            >
+            </ImageBackground>
+            
         </View>
     )
 }
@@ -17,18 +24,21 @@ const Header = props => {
 const styles = StyleSheet.create({
     header: {
         width: '100%',
-        height: 750,
-        backgroundColor: 'green',
-        alignItems: 'center',
-        justifyContent: 'center',
+        height: 400,
         
+        alignItems: 'center',
     },
     headerTitle: {
-        color: '#fff',
-        fontSize: 28,
+        color: 'black',
+        fontSize: 35,
         fontFamily:'PTSansNarrowRegular',
+        fontWeight: 'bold',
         
+        justifyContent: 'center',
+        textAlign:"center",
     },
+    
+    
     
     
 })

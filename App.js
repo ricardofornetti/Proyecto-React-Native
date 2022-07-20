@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Image} from "react-native";
+import { StyleSheet, View,SafeAreaView} from "react-native";
 import { useState } from "react";
 import AddItem from "./componentes/AddItem";
 import List from "./componentes/List";
@@ -54,7 +54,7 @@ export default function App() {
     
     <View style={styles.screen}>
         
-        <Header title={'Bienvenidos'}style={styles.title}>
+        <Header title={'Mantenimiento'}style={styles.title}>
         </Header>
         
         <CustomModal
@@ -72,7 +72,9 @@ export default function App() {
         itemList={itemList}
         onHandlerModal={onHandlerModal}
       />
+      <SafeAreaView style="auto" />
     </View>
+    
   );
 }
 
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
   screen: {
     marginTop: "10%",
     padding: 30,
+    flex:1
   },
   title:{
     fontFamily:'PTSansNarrowBold',
