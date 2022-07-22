@@ -7,6 +7,8 @@ import CustomModal from "./componentes/Modal";
 import Header from "./componentes/Header";
 import { useFonts} from 'expo-font'
 import AppLoading from 'expo-app-loading'
+import { StatusBar } from "expo-status-bar";
+import ShopNavigator from "./navigation/ShopNavigation";
 
 
 
@@ -49,10 +51,10 @@ export default function App() {
   };
 
   if(!loaded) return <AppLoading />
+  
   return (
-    
-    
-    <View style={styles.screen}>
+    <ShopNavigator>
+      <View style={styles.screen}>
         
         <Header title={'Mantenimiento'}style={styles.title}>
         </Header>
@@ -73,7 +75,11 @@ export default function App() {
         onHandlerModal={onHandlerModal}
       />
       <SafeAreaView style="auto" />
+      <StatusBar style="auto" />
     </View>
+    </ShopNavigator>
+    
+    
     
   );
 }
