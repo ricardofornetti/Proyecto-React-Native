@@ -2,9 +2,9 @@
 import { View, TextInput, Button, StyleSheet, TouchableOpacity, Text  } from "react-native";
 
 export default function AddItem(props) {
-  const { onHandlerChangeItem, onHandlerAddItem, textItem } = props;
+    const { onHandlerChangeItem, onHandlerAddItem, textItem } = props;
 
-  return (
+return (
     <View style={styles.container}>
         <TextInput
         placeholder="Escribe Aqui"
@@ -21,7 +21,7 @@ export default function AddItem(props) {
         </TouchableOpacity>
     </View>
     
-  );
+);
 }
 
 const styles = StyleSheet.create({
@@ -33,19 +33,21 @@ const styles = StyleSheet.create({
         
     },
     input: {
-    width: "80%",
+    width: "70%",
     height: 45,
     borderColor: "black",
     borderWidth: 1,
     padding: 10,
     borderRadius:10,
     fontFamily:'PTSansNarrowRegular',
+    marginTop:50,
     },
     buttonAdd:{
         backgroundColor:'#00bfff',
         marginLeft: 10,
         borderRadius:10,
         padding: 15,
+        marginTop:50,
     },
     texto:{
         color: 'white',

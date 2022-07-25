@@ -50,20 +50,20 @@ const styles = StyleSheet.create({
         
         },  
         modalView: {
-        backgroundColor: 'white',
-        width: '80%',
-        height: '50%',
-        borderRadius: 10,
-        padding: '10%',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexDirection: 'column',
+            backgroundColor: 'white',
+            width: '80%',
+            height: '50%',
+            borderRadius: 10,
+            padding: '10%',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexDirection: 'column',
         },
         modalTitle: {
-        backgroundColor: '#ccc',
-        color: 'white',
-        fontSize: 18,
-        fontFamily:'PTSansNarrowRegular'
+            backgroundColor: '#ccc',
+            color: 'white',
+            fontSize: 18,
+            fontFamily:'PTSansNarrowRegular'
         },
         modalMessage: {
             marginBottom: 10,
@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
             textTransform:'uppercase',   
         },
         modalButton: {
-        marginTop: 15,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around'
+            marginTop: 15,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around'
         },
         buttonConfirm:{
             backgroundColor:'#00bfff',

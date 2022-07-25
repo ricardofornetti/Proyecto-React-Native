@@ -1,11 +1,20 @@
 import React from "react";
-import {View, Text, StyleSheet} from 'react-native'
+import {View, TouchableOpacity, StyleSheet,Text} from 'react-native'
+import Header from '../Header/index'
+import Boton from "../../constans/Boton";
 
-const MenuScreen = () => {
+const MenuScreen = ({navigation}) => {
     return (
         <View style={styles.screen}>
-            <Text>Menu Screen</Text>
-            <Text>La concha de la lora</Text>
+            <Text style={styles.title}>Mantenimiento</Text>
+            <Header 
+                //title={'Mantenimiento'}
+                style={styles.title}>
+            </Header>
+            <Boton 
+                    onPress={()=> {navigation.navigate('Productos')}}
+                    text = "Productos"
+            />    
         </View>
     )
 }
@@ -15,7 +24,18 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent:'center',
         alignItems:'center'
-    }
+    },
+    title:{
+        color: 'black',
+        fontSize: 35,
+        fontFamily:'PTSansNarrowRegular',
+        fontWeight: 'bold',
+        justifyContent: 'center',
+        textAlign:"center",
+    },
+    
+    
+
 })
 
 export default MenuScreen;
