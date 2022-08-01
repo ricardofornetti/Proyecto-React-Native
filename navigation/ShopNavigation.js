@@ -1,8 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import CategoryScreen from '../componentes/Screen/CategoryScreen';
-import MenuScreen from '../componentes/Screen/MenuScreen';
+import CategoryScreen from '../Screen/CategoryScreen';
+import MenuScreen from '../Screen/MenuScreen';
+import { CategoryBreadScreen } from '../Screen/CategoryBreadScreen';
+import BreadDetailScreen from '../Screen/BreadDetailScreen';
+import { Platform } from 'react-native';
+import { Color } from '../constans/Color';
+
 
 const Stack = createNativeStackNavigator()
 
@@ -12,9 +17,9 @@ const ShopNavigator = () =>{
             <Stack.Navigator initialRouteName = "Home"
                 screenOptions={{
                     headerStyle:{
-                        backgroundColor: "#00bfff",
+                        backgroundColor: Platform.OS === 'android'? Color.primary : Color.accent
                     },
-                    headerTinColor:'black',
+                    headerTinColor: Platform.OS === 'android' ? Color.accent : 'white',
                     headerTitleStyle:{
                         fontWeight: 'bold',
                     },
@@ -27,10 +32,20 @@ const ShopNavigator = () =>{
                     options={{title:"Inicio"}}
                 />
                 <Stack.Screen 
-                    name="Productos" 
-                    component = {CategoryScreen} 
-                />    
+                    name="Products" 
+                    component = {CategoryScreen}
+                    options={{title:"Productos"}}
+                    //options={({route}) => ({ title: route.params.name})}
+                />
                 
+                <Stack.Screen 
+                    name="Detail" 
+                    component = {BreadDetailScreen}
+                    options={({route}) =>({
+                        title:route.params.name
+                    })
+                }
+                />    
             </Stack.Navigator>
         </NavigationContainer>
     )
@@ -38,3 +53,6 @@ const ShopNavigator = () =>{
 
 
 export default ShopNavigator;
+
+
+

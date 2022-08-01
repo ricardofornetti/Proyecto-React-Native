@@ -1,5 +1,5 @@
-
-import { View, TextInput, Button, StyleSheet, TouchableOpacity, Text  } from "react-native";
+import React from 'react'
+import { View, TextInput, StyleSheet, TouchableOpacity, Text  } from "react-native";
 
 export default function AddItem(props) {
     const { onHandlerChangeItem, onHandlerAddItem, textItem } = props;

@@ -29,8 +29,6 @@ const styles = StyleSheet.create ({
         borderRadius:10,
         padding: 15,
         marginTop:50,
-        
-        
     },
     buttonText:{
         fontFamily:'PTSansNarrowRegular',

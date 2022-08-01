@@ -1,20 +1,27 @@
 import React from "react";
-import {View, TouchableOpacity, StyleSheet,Text} from 'react-native'
-import Header from '../Header/index'
-import Boton from "../../constans/Boton";
+import {View, TouchableOpacity, StyleSheet,Text, FlatList} from 'react-native'
+import Header from '../componentes/Header/index'
+import Boton from "../constans/Boton";
+
 
 const MenuScreen = ({navigation}) => {
+
+    
+
+
     return (
+        
         <View style={styles.screen}>
             <Text style={styles.title}>Mantenimiento</Text>
+            
             <Header 
                 //title={'Mantenimiento'}
                 style={styles.title}>
             </Header>
             <Boton 
-                    onPress={()=> {navigation.navigate('Productos')}}
+                    onPress={()=> {navigation.navigate('Products')}}
                     text = "Productos"
-            />    
+            /> 
         </View>
     )
 }
