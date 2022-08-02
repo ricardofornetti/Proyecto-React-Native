@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     title:{
         color: 'black',
         fontSize: 35,
-        fontFamily:'PTSansNarrowRegular',
+        fontFamily:'Pop_font',
         fontWeight: 'bold',
         justifyContent: 'center',
         textAlign:"center",

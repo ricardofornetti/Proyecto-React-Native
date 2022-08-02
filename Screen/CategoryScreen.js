@@ -1,48 +1,41 @@
 import React from "react";
-import {View, StyleSheet, FlatList} from 'react-native'
+import { View, StyleSheet, FlatList } from "react-native";
 import { useState } from "react";
 import CustomModal from "../componentes/Modal";
 import AddItem from "../componentes/AddItem";
-import List from "../componentes/List"
+import List from "../componentes/List";
 import Boton from "../constans/Boton";
-import {CATEGORIES} from '../Data/Categories'
-import GridItem  from "../componentes/GridItem/GridItem";
+import { CATEGORIES } from "../Data/Categories";
+import GridItem from "../componentes/GridItem/GridItem";
 
-const CategoryScreen = ({navigation}) => {
-
-    /*
+const CategoryScreen = ({ navigation }) => {
+  /*
         const [itemList, setItemList] = useState([]);
         const [textItem, setTextItem] = useState("");
         const [modalVisible, setModalVisible] = useState(false);
         const [itemSelected, setItemSelected] = useState({});
      */
-    
-    
-    const handleSelectedCategory = (item) =>{
-        navigation.navigate('Products',{
-            categoryId: item.id,
-            name: item.title,
-        });
-    }
 
-    const renderGridItem = ({item}) => (
-        <GridItem item ={item} onSelected={handleSelectedCategory} />
-    );
+  const handleSelectedCategory = (item) => {
+    navigation.navigate("CategoryProblems", {
+      categoryId: item.id,
+      name: item.title,
+    });
+  };
 
+  const renderGridItem = ({ item }) => (
+    <GridItem item={item} onSelected={handleSelectedCategory} />
+  );
 
-    
-
-
-    return (
-        <View>
-            <FlatList 
-                data={CATEGORIES}
-                keyExtractor={item =>item.id}
-                renderItem={renderGridItem}
-                numColumns={2}
-            >
-            </FlatList>
-            {/**
+  return (
+    <View>
+      <FlatList
+        data={CATEGORIES}
+        keyExtractor={(item) => item.id}
+        renderItem={renderGridItem}
+        numColumns={2}
+      />
+      {/**
              * <CustomModal
                 modalVisible={modalVisible}
                 onHandlerDeleteItem={onHandlerDeleteItem}
@@ -59,22 +52,18 @@ const CategoryScreen = ({navigation}) => {
                 onHandlerModal={onHandlerModal}
             />
              */}
-            
-            <Boton 
-                    onPress={()=> {navigation.navigate('Home')}}
-                    text = "Volver a Inicio"
-            />  
-            
-        </View>
-    )
-}
 
-
-    
-
+      <Boton
+        onPress={() => {
+          navigation.navigate("Home");
+        }}
+        text="Volver a Inicio"
+      />
+    </View>
+  );
+};
 
 export default CategoryScreen;
-
 
 /*
     const onHandlerChangeItem = (text) => setTextItem(text);
