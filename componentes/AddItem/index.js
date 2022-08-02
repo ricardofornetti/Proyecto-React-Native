@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius:10,
-    fontFamily:'Pop_font',
+    fontFamily:'PTSansNarrowBold',
     marginTop:50,
     },
     buttonAdd:{
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     },
     texto:{
         color: 'white',
-        fontFamily:'Pop_font',
+        fontFamily:'PTSansNarrowBold',
     },
 });

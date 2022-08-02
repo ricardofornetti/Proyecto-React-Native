@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:20,
-        fontFamily:'Pop_font',
+        fontFamily:'PTSansNarrowBold',
     },
     details:{
         fontSize:18,

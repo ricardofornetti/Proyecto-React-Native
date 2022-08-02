@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     headerTitle: {
         color: 'black',
         fontSize: 35,
-        fontFamily:'Pop_font',
+        fontFamily:'PTSansNarrowBold',
         fontWeight: 'bold',
         justifyContent: 'center',
         textAlign:"center",

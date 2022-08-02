@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        fontFamily:'Pop_font',
+        fontFamily:'PTSansNarrowBold',
         marginBottom: 10
     }
 })

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
             backgroundColor: '#ccc',
             color: 'white',
             fontSize: 18,
-            fontFamily:'Pop_font'
+            fontFamily:'PTSansNarrowBold'
         },
         modalMessage: {
             marginBottom: 10,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
             marginLeft: 10,
             borderRadius:10,
             padding: 15,
-            fontFamily:'Pop_font',
+            fontFamily:'PTSansNarrowBold',
         },
         texto:{
             color: 'white',

@@ -31,6 +31,6 @@ const styles = StyleSheet.create ({
         marginTop:50,
     },
     buttonText:{
-        fontFamily:'Pop_font',
+        fontFamily:'PTSansNarrowBold',
     },
 })

@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   title: {
-    fontFamily: "Pop_font",
+    fontFamily: "PTSansNarrowBold",
   },
 });
 

@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     flex:1
   },
   title:{
-    fontFamily:'Pop_font',
+    fontFamily:'PTSansNarrowBold',
   },
 });
